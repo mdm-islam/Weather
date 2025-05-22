@@ -1,0 +1,120 @@
+/* Main layout */
+body {
+  background: linear-gradient(to top, #74ebd5 0%, #ACB6E5 100%);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+}
+
+/* Night mode styles */
+body.night {
+  background: linear-gradient(to top, #0f2027, #203a43, #2c5364);
+  color: #eee;
+}
+
+body.night .weather-card {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+body.night button {
+  background: #333;
+  color: #fff;
+}
+
+/* Input and button styles */
+input, button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #2196f3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0d8bf2;
+}
+
+/* Forecast display area */
+#weather-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Forecast cards */
+.weather-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 1rem;
+  width: 160px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+.weather-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Animation and loading */
+#animation {
+  margin-top: 20px;
+}
+
+#loading {
+  display: none;
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+/* Animated background */
+.weather-background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background: transparent url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif') repeat;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+/* Floating theme toggle icon button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+body.night #theme-toggle {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}

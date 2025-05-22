@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ LottiePlayer for animated icons (include ONLY ONCE) -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="weather-background"></div>
+
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" title="Toggle Theme">🌙</button>
+
+  <!-- Weather form with city autocomplete -->
+  <form id="weather-form">
+    <input type="text" id="city" placeholder="Enter city" list="suggestions" autocomplete="off" />
+    <datalist id="suggestions"></datalist>
+    <button type="submit">Search</button>
+  </form>
+
+  <!-- Loading spinner -->
+  <div id="loading">Loading weather data...</div>
+
+  <!-- Weather animation area -->
+  <div id="animation"></div>
+
+  <!-- Forecast display -->
+  <div id="weather-display"></div>
+
+  <!-- ✅ JS -->
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/animation.js') }}"></script>
+</body>
+</html>
