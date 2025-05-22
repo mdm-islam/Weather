@@ -1,6 +1,6 @@
 # 🌦️ Weather - Weather App (Flask)
 
-WeatherFX is a sleek, real-time animated weather application powered by Python Flask. It fetches 7-day weather forecasts, features animated Lottie visuals (rain, snow, etc.), city autocomplete using GeoDB, and a day/night theme toggle.
+Weather is a sleek, real-time animated weather application powered by Python Flask. It fetches 7-day weather forecasts, features animated Lottie visuals (rain, snow, etc.), city autocomplete using GeoDB, and a day/night theme toggle.
 
 ---
 
@@ -26,7 +26,7 @@ WeatherFX is a sleek, real-time animated weather application powered by Python F
 ## 📦 Installation & Run
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/weatherfx.git
+git clone https://github.com/YOUR_USERNAME/weather.git
 cd weatherfx
 
 # Create virtual environment
